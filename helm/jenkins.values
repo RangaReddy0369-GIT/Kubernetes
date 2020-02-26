@@ -1,0 +1,13 @@
+master:
+  adminPassword: admin
+  resources:
+    limits:
+      cpu: "500m"
+      memory: "1024Mi"
+  serviceType: NodePort
+  NodePort: 32323
+persistence:
+  storageClass:  default
+  size: "8Gi"
+rbac:
+   create: true
