@@ -1,0 +1,17 @@
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  annotations:
+    kubernetes.io/ingress.class: nginx
+  name: example
+  namespace: nginx-ingress
+spec:
+  rules:
+    - host: www.example.com
+      http:
+        paths:
+          - backend:
+              serviceName: abc-123
+              servicePort: 80
+            path: /
+    

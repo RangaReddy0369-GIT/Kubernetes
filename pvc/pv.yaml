@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: PersistentVolume
+metadata: 
+   name: pv003
+   labels: 
+      type: azazonEBS
+spec: 
+   capacity: 
+      storage: 1024
+   accessModes:
+      - ReadWriteOnce
+   awsElasticBlockStore:
+     volumeID: vol-0ab92a4e280d59073 
+     fsType: ext4
